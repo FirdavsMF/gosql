@@ -1,0 +1,47 @@
+### All
+GET http://127.0.0.1:9999/customers HTTP/1.1
+
+### ByID
+GET http://127.0.0.1:9999/customers/2 HTTP/1.1
+
+### Delete
+DELETE http://127.0.0.1:9999/customers/1 HTTP/1.1
+
+### All Active
+GET http://localhost:9999/customers/active HTTP/1.1
+
+### Block
+POST http://127.0.0.1:9999/customers/1/block HTTP/1.1
+
+### Unblock
+DELETE http://127.0.0.1:9999/customers/1/block HTTP/1.1
+
+
+
+### Create or Update
+POST http://127.0.0.1:9999/api/customers  HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Vasya",
+    "phone": "+998946665533",
+    "password": "123"
+}
+
+###
+POST http://127.0.0.1:9999/api/customers/token HTTP/1.1
+Content-Type: application/json
+
+{
+    "login": "+998946665533",
+    "password": "123"
+}
+
+###
+POST http://127.0.0.1:9999/api/customers/token/validate HTTP/1.1
+Content-Type: application/json
+
+{
+    "token":"52fdfc072182654f163f5f0f9a621d729566c74d10037c4d7bbb0407d1e2c64981855ad8681d0d86d1e91e00167939cb6694d2c422acd208a0072939487f6999eb9d18a44784045d87f3c67cf22746e995af5a25367951baa2ff6cd471c483f15fb90badb37c5821b6d95526a41a9504680b4e7c8b763a1b1d49d4955c8486216325253fec738dd7a9e28bf921119c160f0702448615bbda08313f6a8eb668d20bf5059875921e668a5bdf2c7fc4844592d2572bcd0668d2d6c52f5054e2d0836bf84c7174cb7476364cc3dbd968b0f7172ed85794bb358b0c3b525da1786f9fff094279db1944ebd7a19d0f7bbacbe0255aa5b7d44bec40f84c892b9bffd436"
+}

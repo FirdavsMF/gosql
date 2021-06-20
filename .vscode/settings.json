@@ -1,0 +1,15 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "192.168.99.100",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "db_connection",
+            "database": "db",
+            "username": "sardor",
+            "password": "123"
+        }
+    ],
+   
+}
